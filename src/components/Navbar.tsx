@@ -38,7 +38,7 @@ export const Navbar = () => {
 
   return (
     <header
-      className={`sticky top-0 left-0 w-full h-16 z-50 transition-transform duration-300 ${
+      className={`sticky top-0 left-0 w-full bg-[#a66c4b60] h-16 z-50 transition-transform duration-300 ${
         isVisible ? "translate-y-0" : "-translate-y-full"
       }`}
     >
@@ -49,14 +49,14 @@ export const Navbar = () => {
           </Link>
           <div className="hidden lg:flex lg:items-center lg:space-x-6">
             <Link
-              href="/cu"
-              className={`buttonVariants({variant:"ghost"}) text-xl font-bold  `}
+              href="/clothes"
+              className={`buttonVariants({variant:"ghost"}) text-xl `}
             >
               Produtos
             </Link>
             <Link
               href="/sign-in"
-              className={`buttonVariants({variant:"ghost"}) text-xl font-bold  `}
+              className={`buttonVariants({variant:"ghost"}) text-xl  `}
             >
               {" "}
               Login
@@ -81,7 +81,7 @@ export const Navbar = () => {
                         href="/cu"
                         className={`buttonVariants({variant:"ghost"}) text-xl font-bold  `}
                       >
-                        Produtos
+                        Roupas
                       </Link>
                       <Link
                         href="/sign-in"

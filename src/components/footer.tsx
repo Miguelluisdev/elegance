@@ -4,7 +4,7 @@ import { MaxWidthWrapper } from "./max-width-wrapper"
 export const Footer = () => {
   return (
     <MaxWidthWrapper>
-      <footer className="bg-muted py-6 h-full mt-28  md:py-12 w-full">
+      <footer className="bg-muted py-6 h-full border-t  mt-28  md:py-12 w-full">
         <div className="container max-w-7xl grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
           <div className="flex flex-col gap-4">
             <Link href="/" className="flex items-center gap-2" prefetch={false}>
