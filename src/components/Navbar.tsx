@@ -1,5 +1,4 @@
 "use client"
-import { buttonVariants } from "@/components/ui/button"
 import {
   Sheet,
   SheetContent,
@@ -7,6 +6,7 @@ import {
   SheetHeader,
   SheetTrigger,
 } from "@/components/ui/sheet"
+import { SignInButton, SignedIn, SignedOut, UserButton } from "@clerk/nextjs"
 import { Logs, ShoppingBag } from "lucide-react"
 import Link from "next/link"
 import { useEffect, useState } from "react"
@@ -44,23 +44,25 @@ export const Navbar = () => {
     >
       <div className="">
         <div className="max-w-7xl mx-auto py-4 px-6 flex items-center justify-around">
-          <Link href="/" >
+          <Link href="/">
             <h1 className="text-2xl font-bold">Elegance</h1>
           </Link>
           <div className="hidden lg:flex lg:items-center lg:space-x-6">
             <Link
               href="/clothes"
-              className={`buttonVariants({variant:"ghost"}) text-xl `}
+              className={`buttonVariants({variant:"ghost"}) `}
             >
               Produtos
             </Link>
-            <Link
-              href="/sign-in"
-              className={`buttonVariants({variant:"ghost"}) text-xl  `}
-            >
+            <div className="flex items-center ">
               {" "}
-              Login
-            </Link>
+              <SignedOut>
+                <SignInButton mode="modal"> Login</SignInButton>
+              </SignedOut>
+              <SignedIn>
+                <UserButton />
+              </SignedIn>
+            </div>
             <span>
               <ModeToggle />
             </span>
@@ -71,7 +73,9 @@ export const Navbar = () => {
           <div className="flex lg:hidden lg:flex-1 lg:items-center lg:justify-end lg:space-x-6">
             <Sheet>
               <SheetTrigger>
-                <span className="cursor-pointer" ><Logs /></span>
+                <span className="cursor-pointer">
+                  <Logs />
+                </span>
               </SheetTrigger>
               <SheetContent>
                 <SheetHeader>
@@ -90,7 +94,7 @@ export const Navbar = () => {
                         {" "}
                         Login
                       </Link>
-                      <span className="m-3"  >
+                      <span className="m-3">
                         <ModeToggle />
                       </span>
                       <span className="cursor-pointer">

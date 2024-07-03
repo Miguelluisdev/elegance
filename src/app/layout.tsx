@@ -1,9 +1,12 @@
+import { Footer } from "@/components/footer"
 import { ThemeProvider } from "@/components/theme-provider"
+import { ClerkProvider } from "@clerk/nextjs"
 import type { Metadata } from "next"
 import { Baskervville, Inter } from "next/font/google"
 import { Navbar } from "../components/Navbar"
+import { ptBR } from "@clerk/localizations";
+
 import "./globals.css"
-import { Footer } from "@/components/footer"
 
 const basker = Baskervville({ weight: "400", subsets: ["latin"] })
 
@@ -20,7 +23,7 @@ export const metadata: Metadata = {
     locale: "pt-br",
     url: "http://localhost:3000",
     siteName: "Elegance",
-  }
+  },
 }
 
 export default function RootLayout({
@@ -29,22 +32,24 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="pt-br">
-      <head>
-        <link rel="icon" href="/favicon.svg" sizes="any" />
-      </head>
-      <body className={basker.className}>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
-          <Navbar />
-          {children}
-          <Footer/>
-        </ThemeProvider>
-      </body>
-    </html>
+    <ClerkProvider localization={ptBR} >
+      <html lang="pt-br">
+        <head>
+          <link rel="icon" href="/favicon.svg" sizes="any" />
+        </head>
+        <body className={basker.className}>
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >
+            <Navbar />
+            {children}
+            <Footer />
+          </ThemeProvider>
+        </body>
+      </html>
+    </ClerkProvider>
   )
 }
