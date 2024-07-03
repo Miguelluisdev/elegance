@@ -19,7 +19,7 @@ export const About = () => {
               src="/about-img.jpg"
               width="550"
               height="310"
-              alt="Portfólio"
+              alt="about-page"
               className="mx-auto aspect-video overflow-hidden rounded-xl object-cover object-center sm:w-full lg:order-last"
             />
             <div className="flex flex-col justify-center space-y-4">

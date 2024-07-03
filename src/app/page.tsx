@@ -58,27 +58,11 @@ export default async function Home() {
       </MaxWidthWrapper>
 
       <MaxWidthWrapper>
-      <div className="max-w-7xl mx-auto pt-8 px-8 xl:px-0">
-      <div className="text-center mb-8">
-        <h1 className="text-3xl font-bold">
-          Alguns dos Nossos Produtos
-        </h1>
-      </div>
-      
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 xl:gap-6 justify-items-center">
-        {product.slice(0, 4).map((product:Product) => (
-          <CardProduct key={product.id} product={product} />
-        ))}
-      </div>
-    </div>
-      </MaxWidthWrapper>
-
-      <MaxWidthWrapper>
         <About />
       </MaxWidthWrapper>
 
       <MaxWidthWrapper>
-        <div className=" flex justify-center">
+        <div className="mb-20 flex justify-center">
           <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3 max-w-5xl">
             <div className="flex flex-col items-center">
               <CircleFadingPlus className="h-6 w-6 text-primary" />
@@ -104,6 +88,20 @@ export default async function Home() {
                 roupas que respeitam o meio ambiente.
               </p>
             </div>
+          </div>
+        </div>
+      </MaxWidthWrapper>
+
+      <MaxWidthWrapper>
+        <div className="max-w-7xl mx-auto pt-8 px-8 xl:px-0">
+          <div className="text-center mb-8">
+            <h1 className="text-3xl font-bold">Alguns dos Nossos Produtos</h1>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 xl:gap-6 justify-items-center">
+            {product.slice(0, 4).map((product: Product) => (
+              <CardProduct key={product.id} product={product} />
+            ))}
           </div>
         </div>
       </MaxWidthWrapper>
