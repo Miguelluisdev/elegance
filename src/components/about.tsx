@@ -1,3 +1,5 @@
+import Image from "next/image"
+
 export const About = () => {
     return (
       <section className="w-full mt-4  py-12 md:py-24 lg:py-32">
@@ -13,7 +15,7 @@ export const About = () => {
             </div>
           </div>
           <div className="mx-auto grid max-w-5xl items-center gap-6 py-12 lg:grid-cols-2 lg:gap-12">
-            <img
+            <Image
               src="/about-img.jpg"
               width="550"
               height="310"

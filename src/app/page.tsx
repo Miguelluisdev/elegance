@@ -1,4 +1,5 @@
-"use client"
+import { Product } from "@/@types/product"
+import CardProduct from "@/components/CardProduct"
 import { About } from "@/components/about"
 import { MaxWidthWrapper } from "@/components/max-width-wrapper"
 import {
@@ -14,35 +15,19 @@ import {
   ShieldCheck,
 } from "lucide-react"
 import Link from "next/link"
-import { useEffect } from "react"
 ;("retirar o comentario quando estiver pronto")
 
-export default function Home() {
-  // useEffect(() => {
-  //   // Função para desabilitar o menu de contexto (botão direito do mouse)
-  //   const disableContextMenu = (e: MouseEvent) => {
-  //     e.preventDefault();
-  //     alert("Conteúdo protegido.");
-  //   };
+async function getProducts() {
+  const res = await fetch("https://fakestoreapi.com/products")
 
-  //   // Função para desabilitar atalhos de teclado específicos
-  //   const disableDevToolsShortcuts = (e: KeyboardEvent) => {
-  //     if ((e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'J')) || (e.ctrlKey && e.key === 'U') || e.key === 'F12') {
-  //       e.preventDefault();
-  //       alert("Conteúdo protegido.");
-  //     }
-  //   };
+  if (!res.ok) {
+    throw new Error("Failed to fetch data")
+  }
 
-  //   document.addEventListener('contextmenu', disableContextMenu);
-  //   window.addEventListener('keydown', disableDevToolsShortcuts);
-
-  //   // Limpeza dos event listeners ao desmontar o componente
-  //   return () => {
-  //     document.removeEventListener('contextmenu', disableContextMenu);
-  //     window.removeEventListener('keydown', disableDevToolsShortcuts);
-  //   };
-  // }, []);
-
+  return res.json()
+}
+export default async function Home() {
+  const product = await getProducts()
   return (
     <>
       <MaxWidthWrapper>
@@ -57,7 +42,7 @@ export default function Home() {
             <div className="flex flex-col gap-2 sm:flex-row">
               <Link
                 href="/clothes"
-                className="inline-flex h-10 items-center justify-center rounded-md   bg-background px-6 text-sm font-medium text-primary shadow transition-colors bg-[#A66C4B]  focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
+                className="inline-flex h-10 items-center justify-center rounded-md text-white  bg-background px-6 text-sm font-medium text-primary shadow transition-colors bg-[#A66C4B]  focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
               >
                 Conheça Mais
               </Link>
@@ -73,25 +58,19 @@ export default function Home() {
       </MaxWidthWrapper>
 
       <MaxWidthWrapper>
-        <div className="max-w-7xl mx-auto pt-8 px-8 xl:px-0">
-          <h1 className="text-3xl font-bold text-center mb-8">
-            Alguns dos Nossos Produtos
-          </h1>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 xl:gap-6 justify-items-center">
-            <div className="bg-white rounded-lg shadow-lg overflow-hidden w-full max-w-xs">
-              Produto 1
-            </div>
-            <div className="bg-white rounded-lg shadow-lg overflow-hidden w-full max-w-xs">
-              Produto 2
-            </div>
-            <div className="bg-white rounded-lg shadow-lg overflow-hidden w-full max-w-xs">
-              Produto 3
-            </div>
-            <div className="bg-white rounded-lg shadow-lg overflow-hidden w-full max-w-xs">
-              Produto 4
-            </div>
-          </div>
-        </div>
+      <div className="max-w-7xl mx-auto pt-8 px-8 xl:px-0">
+      <div className="text-center mb-8">
+        <h1 className="text-3xl font-bold">
+          Alguns dos Nossos Produtos
+        </h1>
+      </div>
+      
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 xl:gap-6 justify-items-center">
+        {product.slice(0, 4).map((product:Product) => (
+          <CardProduct key={product.id} product={product} />
+        ))}
+      </div>
+    </div>
       </MaxWidthWrapper>
 
       <MaxWidthWrapper>
