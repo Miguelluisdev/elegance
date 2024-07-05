@@ -38,7 +38,7 @@ export const Navbar = () => {
 
   return (
     <header
-      className={`sticky top-0 left-0 w-full bg-[#a66c4b] h-16 z-50 transition-transform duration-300 ${
+      className={`sticky top-0 left-0 w-full bg-[#a66c4b00] h-16 z-50 transition-transform  duration-300 ${
         isVisible ? "translate-y-0" : "-translate-y-full"
       }`}
     >
