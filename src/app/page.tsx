@@ -17,7 +17,7 @@ import {
 import Link from "next/link"
 ;("retirar o comentario quando estiver pronto")
 
-async function getProducts() {
+ export async function getProducts() {
   const res = await fetch("https://fakestoreapi.com/products")
 
   if (!res.ok) {
