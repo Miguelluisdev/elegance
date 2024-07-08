@@ -44,7 +44,7 @@ export default async function Home() {
   return (
     <>
       <MaxWidthWrapper>
-        <section className=" py-12 relative  md:py-24 md:mt-28 lg:py-32">
+        <section className=" py-12 mt-20 relative  md:py-24 md:mt-28 lg:py-32">
           <div className="container flex flex-col items-center justify-center space-y-6 text-center">
             <h1 className="text-3xl font-bold text-background sm:text-4xl md:text-5xl">
               Moda e Elegância para Você
@@ -105,7 +105,7 @@ export default async function Home() {
         </div>
       </MaxWidthWrapper>
 
-      <MaxWidthWrapper>
+
         <div className="max-w-7xl mx-auto pt-8 px-8 xl:px-0">
           <div className="text-center mb-8">
             <h1 className="text-3xl font-bold">Alguns dos Nossos Produtos</h1>
@@ -117,7 +117,7 @@ export default async function Home() {
             ))}
           </div>
         </div>
-      </MaxWidthWrapper>
+
 
       <MaxWidthWrapper>
         <div className="w-full text-xl  mt-20 lg:w-1/2 mx-auto">
