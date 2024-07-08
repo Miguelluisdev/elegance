@@ -14,10 +14,10 @@ export default async function Clothes() {
         <h1 className="text-3xl font-bold"> Nossos Produtos</h1>
       </div>
 
-      <div className="flex justify-between items-center mb-8">
+      {/* <div className="flex justify-between items-center mb-8">
         <SearchInput />
         <FilterDropdown />
-      </div>
+      </div> */}
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 xl:gap-6 justify-items-center">
         {product.map((product: Product) => (

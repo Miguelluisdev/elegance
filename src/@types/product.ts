@@ -6,4 +6,5 @@ export type Product = {
     image: string;
     quantity?: number | 1;
     currency?:string;
+    status?: 'masculino' | 'feminino' | 'todos'
 }
