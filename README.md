@@ -27,7 +27,7 @@ Para executar este projeto localmente, siga os passos abaixo:
 
 1. Clone o repositório:
    ```bash
-   git clone https://github.com/Miguelluisdeb/elegance.git
+   git clone https://github.com/Miguelluisdev/elegance.git
    ```
 
 2. Navegue até o diretório do projeto:
