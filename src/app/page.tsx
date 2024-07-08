@@ -15,16 +15,29 @@ import {
   ShieldCheck,
 } from "lucide-react"
 import Link from "next/link"
+import Stripe from "stripe"
 ;("retirar o comentario quando estiver pronto")
 
- export async function getProducts() {
-  const res = await fetch("https://fakestoreapi.com/products")
-
-  if (!res.ok) {
-    throw new Error("Failed to fetch data")
-  }
-
-  return res.json()
+export async function getProducts(): Promise<Product[]> {
+  const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
+    apiVersion: "2024-06-20",
+  })
+  const products = await stripe.products.list()
+  const formatedProducts = await Promise.all(products.data.map(async (product) => {
+    const price = await stripe.prices.list({
+      product: product.id
+    })
+    return {
+      id: product.id,
+      price: price.data[0].unit_amount,
+      name: product.name,
+      image: product.images[0],
+      description: product.description,
+      currency: price.data[0].currency
+    }
+  }))
+  return formatedProducts
+ 
 }
 export default async function Home() {
   const product = await getProducts()
@@ -99,7 +112,7 @@ export default async function Home() {
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 xl:gap-6 justify-items-center">
-            {product.slice(0, 4).map((product: Product) => (
+            {product.slice(0, 4).map((product) => (
               <CardProduct key={product.id} product={product} />
             ))}
           </div>

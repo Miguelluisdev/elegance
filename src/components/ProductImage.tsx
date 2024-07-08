@@ -11,12 +11,12 @@ type ProductImageProps = {
 export default function ProductImage({ product, fill }: ProductImageProps) {
 
   return (
-    <div className="relative mx-3 mt-3 flex justify-center h-60 overflow-hidden rounded-xl">
+    <div className="relative mx-3 mt-3 flex justify-center h-auto w-auto  overflow-hidden rounded-xl">
       <Image
         src={product.image}
-        width={ 400}
+        width={ 700}
         height={ 700}
-        alt={product.tittle}
+        alt={product.name}
       />
     </div>
   );
