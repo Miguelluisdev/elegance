@@ -82,17 +82,10 @@ export const Navbar = () => {
                   <SheetDescription className="">
                     <div className="ml-4 flex flex-col justify-between items-center m-3 lg:ml-6">
                       <Link
-                        href="/cu"
+                        href="/clothes"
                         className={`buttonVariants({variant:"ghost"}) text-xl font-bold  `}
                       >
                         Produtos
-                      </Link>
-                      <Link
-                        href="/sign-in"
-                        className={`buttonVariants({variant:"ghost"}) text-xl font-bold  `}
-                      >
-                        {" "}
-                        Login
                       </Link>
                       <span className="m-3">
                         <ModeToggle />
