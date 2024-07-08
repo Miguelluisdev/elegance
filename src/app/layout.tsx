@@ -7,6 +7,7 @@ import { Navbar } from "../components/Navbar"
 import { ptBR } from "@clerk/localizations";
 
 import "./globals.css"
+import ScrollControl from "@/hooks/use-to-top"
 
 const basker = Baskervville({ weight: "400", subsets: ["latin"] })
 
@@ -45,6 +46,7 @@ export default function RootLayout({
             disableTransitionOnChange
           >
             <Navbar />
+            <ScrollControl/>
             {children}
             <Footer />
           </ThemeProvider>
