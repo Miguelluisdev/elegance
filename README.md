@@ -1,36 +1,66 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+# Elegance(EM DESENVOLVIMENTO)
 
-First, run the development server:
+Bem-vindo ao repositório da **Elegance**! Este projeto é uma loja de roupas modernas que está atualmente em desenvolvimento. A Elegance visa oferecer uma experiência de compra elegante e eficiente, utilizando tecnologias de ponta para criar uma plataforma robusta e intuitiva.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Tecnologias Utilizadas
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **Next.js**: Framework React para desenvolvimento web rápido e eficiente.
+- **Tailwind CSS**: Framework CSS utilitário para estilização rápida e customizável.
+- **Framer Motion**: Biblioteca para animações e interações suaves e elegantes.
+- **Prisma**: ORM para interagir com o banco de dados de maneira eficiente e tipada.
+- **PostgreSQL**: Banco de dados relacional utilizado para armazenar os dados da aplicação.
+- **Vercel**: Plataforma de deploy contínuo e hospedagem otimizada para projetos Next.js.
+- **Clerk**: Solução de autenticação e gerenciamento de usuários.
+- **Stripe**: Plataforma de pagamentos para processar transações de forma segura.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Funcionalidades
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- **Catálogo de Produtos**: Navegue por uma variedade de roupas modernas.
+- **Carrinho de Compras**: Adicione produtos ao carrinho e gerencie suas compras.
+- **Processamento de Pagamentos**: Realize transações de forma segura através do Stripe.
+- **Autenticação**: Crie uma conta, faça login e gerencie seu perfil com Clerk.
+- **SEO**: Otimização para motores de busca ou otimização para motores de pesquisa.
+## Instalação
 
-## Learn More
+Para executar este projeto localmente, siga os passos abaixo:
 
-To learn more about Next.js, take a look at the following resources:
+1. Clone o repositório:
+   ```bash
+   git clone https://github.com/seu-usuario/elegance.git
+   ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+2. Navegue até o diretório do projeto:
+   ```bash
+   cd elegance
+   ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+3. Instale as dependências:
+   ```bash
+   npm install
+   ```
 
-## Deploy on Vercel
+4. Configure as variáveis de ambiente:
+   Crie um arquivo `.env o arquivo` na raiz do projeto e adicione suas variáveis de ambiente conforme necessário. Veja o arquivo `.env.local` para referência.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+6. Inicie o servidor de desenvolvimento:
+   ```bash
+   npm run dev
+   ```
+
+O aplicativo estará disponível em `http://localhost:3000`.
+
+## Deploy
+
+Este projeto será configurado para deploy contínuo na Vercel. Qualquer commit na branch principal (`main`) acionará automaticamente um novo deploy.
+
+## Contribuição
+
+Contribuições são bem-vindas! Sinta-se à vontade para abrir issues ou pull requests. Para grandes mudanças, por favor, abra uma issue primeiro para discutir o que você gostaria de mudar.
+
+## Licença
+
+Este projeto está licenciado sob os termos da licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+
+---
