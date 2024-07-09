@@ -39,7 +39,7 @@ export default async function ClothesProduct({
         <div className="grid gap-3 items-start">
           <ProductImage product={product} />
         </div>
-        <div className="grid gap-4 mt-48  md:gap-10 items-start">
+        <div className="grid gap-4 sm:mt-48  md:gap-10 items-start">
           <div className="grid gap-4">
             <h1 className="font-bold text-3xl lg:text-4xl">{product.name}</h1>
             <div>

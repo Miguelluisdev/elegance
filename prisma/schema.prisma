@@ -20,4 +20,5 @@ model User {
   externalId String @unique
   createAt DateTime @default(now())
   updateAt DateTime @updatedAt
+  stripeCustomerId String?
 }
