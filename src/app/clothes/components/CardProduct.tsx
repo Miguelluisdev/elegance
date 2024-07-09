@@ -10,7 +10,7 @@ type Productsprops = {
 
 export default async function CardProduct({ product }: Productsprops) {
   return (
-    <Link href={`/clothes/${product.id}`} >
+   
       <div className="relative m-10 flex w-full max-w-xs flex-col overflow-hidden rounded-lg  shadow-md">
         <ProductImage product={product} fill />
         <div className="mt-4 px-5 pb-5">
@@ -20,9 +20,9 @@ export default async function CardProduct({ product }: Productsprops) {
               <span className="text-3xl font-bold ">{ formatPrice(product.price)}</span>
             </p>
           </div>
-          <AddCart product={product} />
+          <Link href={`/clothes/${product.id}`}className="flex items-center justify-center rounded-md bg-[#D9A273]  text-white px-5 py-2.5 text-center text-sm font-medium hover:bg-slate-500 focus:outline-none focus:ring-4 focus:ring-blue-300" >Detalhes</Link>
         </div>
       </div>
-    </Link>
+
   )
 }

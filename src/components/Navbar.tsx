@@ -12,6 +12,7 @@ import { SignInButton, SignedIn, SignedOut, UserButton } from "@clerk/nextjs"
 import { Logs, ShoppingBag } from "lucide-react"
 import Link from "next/link"
 import { useEffect, useState } from "react"
+import { CartDrawer } from "./CartDrawer"
 import EmptyCart from "./EmptyCart"
 import { ModeToggle } from "./mode-toggle"
 export const Navbar = () => {
@@ -71,30 +72,7 @@ export const Navbar = () => {
               <ModeToggle />
             </span>
             <span className="cursor-pointer">
-              <Sheet>
-                <SheetTrigger>
-                  <div className="flex relative items-center">
-                    <ShoppingBag />
-                    <span className="bg-[#D9A273] font-bold text-2xl rounded-full h-5 w-5 absolute left-3 bottom-3 flex items-center justify-center ">
-                      2
-                    </span>
-                  </div>
-                </SheetTrigger>
-                <SheetContent className="border-none bg-white/50 dark:bg-black/25 ">
-                  <SheetHeader>
-                    <SheetTitle>Meu Carrinho</SheetTitle>
-                    <SheetDescription>
-                      {useStore.cart.length === 0 ? (
-                        <EmptyCart />
-                      ) : (
-                        useStore.cart.map((item) => (
-                          <div key={item.id}>{item.name}</div>
-                        ))
-                      )}
-                    </SheetDescription>
-                  </SheetHeader>
-                </SheetContent>
-              </Sheet>
+              <CartDrawer />
             </span>
           </div>
           <div className="flex lg:hidden lg:flex-1 lg:items-center lg:justify-end lg:space-x-6">
@@ -130,26 +108,7 @@ export const Navbar = () => {
               </SheetContent>
             </Sheet>
             <span className="cursor-pointer px-5 ">
-              <Sheet>
-                <SheetTrigger>
-                  {" "}
-                  <ShoppingBag />
-                </SheetTrigger>
-                <SheetContent className="border-none ">
-                  <SheetHeader>
-                    <SheetTitle>Meu Carrinho</SheetTitle>
-                    <SheetDescription>
-                    {useStore.cart.length === 0 ? (
-                        <EmptyCart />
-                      ) : (
-                        useStore.cart.map((item) => (
-                          <div key={item.id}>{item.name}</div>
-                        ))
-                      )}
-                    </SheetDescription>
-                  </SheetHeader>
-                </SheetContent>
-              </Sheet>
+              <CartDrawer />
             </span>
           </div>
         </div>
