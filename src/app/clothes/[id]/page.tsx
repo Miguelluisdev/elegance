@@ -1,9 +1,11 @@
 import { Product } from "@/@types/product"
+import { fecthProducts } from "@/app/actions"
 import ProductImage from "@/components/ProductImage"
 import { MaxWidthWrapper } from "@/components/max-width-wrapper"
 import { formatPrice } from "@/lib/format-price"
 import Stripe from "stripe"
 import AddCart from "../components/AddCart"
+import CardProduct from "../components/CardProduct"
 
 type ProductPageProps = {
   params: {
@@ -33,6 +35,8 @@ export default async function ClothesProduct({
   params: { id },
 }: ProductPageProps) {
   const product = await getProductid(id)
+
+  const { formatedProducts } = await fecthProducts({})
   return (
     <MaxWidthWrapper>
       <div className="grid md:grid-cols-2 gap-6 lg:gap-12 items-start max-w-6xl px-4 mx-auto py-6">
@@ -53,6 +57,16 @@ export default async function ClothesProduct({
           </div>
           <AddCart product={product} />
         </div>
+        <div className="max-w-7xl mx-auto pt-8 px-8 xl:px-0">
+          <div className="text-center mb-8">
+            <h1 className="text-3xl font-bold">Produtos Recomendados</h1>
+          </div>
+        </div>
+      </div>
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 xl:gap-6 justify-items-center">
+        {formatedProducts.slice(4 , 8).map((product: Product) => (
+          <CardProduct key={product.id} product={product} />
+        ))}
       </div>
     </MaxWidthWrapper>
   )

@@ -29,6 +29,7 @@
     "prisma": "^5.16.1",
     "react": "^18",
     "react-dom": "^18",
+    "react-intersection-observer": "^9.13.0",
     "stripe": "^16.2.0",
     "svix": "^1.24.0",
     "tailwind-merge": "^2.3.0",

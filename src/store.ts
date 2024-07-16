@@ -5,7 +5,12 @@ import { Product } from "./@types/product"
 type CartState = {
   cart: Product[]
   addProduct: (product: Product) => void
-  removeProduct: (productId: Product) => void
+  removeProduct: (product: Product) => void
+  onCheckout: string
+  setCheckout: (checkout: string) => void
+  clearCart: () => void // Adicionar clearCart ao estado
+  paymentIntent: string
+  setPaymentIntent: (paymentIntent: string) => void
 }
 
 export const useCartStore = create<CartState>()(
@@ -43,6 +48,11 @@ export const useCartStore = create<CartState>()(
             return { cart: filteredCart }
           }
         }),
+      onCheckout: "cart",
+      setCheckout: (checkout) => set(() => ({ onCheckout: checkout })),
+      clearCart: () => set({ cart: [] }), // Implementação da função clearCart
+      paymentIntent: "",
+      setPaymentIntent: (paymentIntent) => set(() => ({ paymentIntent}))
     }),
     { name: "cart-storage" },
   ),
