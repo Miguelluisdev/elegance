@@ -1,15 +1,17 @@
-import { Footer } from "@/components/footer"
-import { ThemeProvider } from "@/components/theme-provider"
-import { ClerkProvider } from "@clerk/nextjs"
-import type { Metadata } from "next"
-import { Baskervville, Inter } from "next/font/google"
-import { Navbar } from "../components/Navbar"
+// app/layout.tsx (ou outro arquivo de layout principal)
+
+import { Footer } from "@/components/footer";
+import { ThemeProvider } from "@/components/theme-provider";
+import ScrollControl from "@/hooks/use-to-top";
 import { ptBR } from "@clerk/localizations";
+import { ClerkProvider } from "@clerk/nextjs";
+import type { Metadata } from "next";
+import { Baskervville } from "next/font/google";
+import { Navbar } from "../components/Navbar";
+import ProtectComponent from "@/hooks/use-protect";
+import "./globals.css";
 
-import "./globals.css"
-import ScrollControl from "@/hooks/use-to-top"
-
-const basker = Baskervville({ weight: "400", subsets: ["latin"] })
+const basker = Baskervville({ weight: "400", subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: {
@@ -25,15 +27,15 @@ export const metadata: Metadata = {
     url: "http://localhost:3000",
     siteName: "Elegance",
   },
-}
+};
 
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode
+  children: React.ReactNode;
 }>) {
   return (
-    <ClerkProvider localization={ptBR} >
+    <ClerkProvider localization={ptBR}>
       <html lang="pt-br">
         <head>
           <link rel="icon" href="/favicon.svg" sizes="any" />
@@ -46,12 +48,13 @@ export default function RootLayout({
             disableTransitionOnChange
           >
             <Navbar />
-            <ScrollControl/>
+            <ProtectComponent />
+            <ScrollControl />
             {children}
             <Footer />
           </ThemeProvider>
         </body>
       </html>
     </ClerkProvider>
-  )
+  );
 }

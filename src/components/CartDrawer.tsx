@@ -45,10 +45,8 @@ export function CartDrawer() {
   }
 
   const confirmCheckout = async () => {
-    // Lógica para processar o checkout
     useStore.setCheckout("checkout")
-    // Remova esta linha para não limpar o carrinho por enquanto
-    // useStore.clearCart()
+    useStore.clearCart()
     setIsCheckoutModalOpen(false)
   }
 

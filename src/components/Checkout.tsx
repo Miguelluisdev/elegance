@@ -20,6 +20,6 @@ export function Checkout(){
         })
     },[cartStore.cart , cartStore.paymentIntent])
     return (
-        <div className="">cu</div>
+        <div className="">teste</div>
     )
 }
