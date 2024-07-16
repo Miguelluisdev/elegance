@@ -1,7 +1,7 @@
 
-# Elegance(CONCLUÍDO)não hospedado
+# Elegance(CONCLUÍDO)
 
-Bem-vindo ao repositório da **Elegance**! Este projeto é uma loja de roupas modernas que está atualmente em desenvolvimento. A Elegance visa oferecer uma experiência de compra elegante e eficiente, utilizando tecnologias de ponta para criar uma plataforma robusta e intuitiva.
+Bem-vindo ao repositório da **Elegance**! Este projeto é uma loja de roupas modernas que está atualmente pronto. A Elegance visa oferecer uma experiência de compra elegante e eficiente, utilizando tecnologias de ponta para criar uma plataforma robusta e intuitiva.
 
 ## Tecnologias Utilizadas
 
@@ -20,7 +20,7 @@ Bem-vindo ao repositório da **Elegance**! Este projeto é uma loja de roupas mo
 - **Carrinho de Compras**: Adicione produtos ao carrinho e gerencie suas compras.
 - **Autenticação**: Crie uma conta, faça login e gerencie seu perfil com Clerk.
 - **Performance**: Desempenho otimizado para garantir uma experiência de navegação rápida e eficiente.
-- 
+- **SEO**: Otimização para motores de busca ou otimização para motores de pesquisa.
 ## Instalação
 
 Para executar este projeto localmente, siga os passos abaixo:
@@ -70,7 +70,7 @@ O aplicativo estará disponível em `http://localhost:3000`.
 
 ## Deploy
 
-Este projeto será configurado para deploy contínuo na Vercel. Qualquer commit na branch principal (`main`) acionará automaticamente um novo deploy.
+Este projeto teve seu banco hospedado na vercel. o site para o clerk funcionar é necessario comprar um dominio na vercel e configurar , por isso o site não está hospedado.
 
 ## Contribuição
 
