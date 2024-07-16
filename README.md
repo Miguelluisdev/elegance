@@ -1,5 +1,5 @@
 
-# Elegance(EM DESENVOLVIMENTO)
+# Elegance(CONCLUÍDO)não hospedado
 
 Bem-vindo ao repositório da **Elegance**! Este projeto é uma loja de roupas modernas que está atualmente em desenvolvimento. A Elegance visa oferecer uma experiência de compra elegante e eficiente, utilizando tecnologias de ponta para criar uma plataforma robusta e intuitiva.
 
@@ -42,6 +42,23 @@ Para executar este projeto localmente, siga os passos abaixo:
 
 4. Configure as variáveis de ambiente:
    Crie um arquivo `.env o arquivo` na raiz do projeto e adicione suas variáveis de ambiente conforme necessário. Veja o arquivo `.env.local` para referência.
+      CONFIGURE O .ENV COM ESSAS VARIÁVEIS DE AMBIENTE` E O BANCO DE DADOS SIGA O SCHEMA.PRISMA:
+
+         NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=
+         CLERK_SECRET_KEY=
+         CLERK_WEBHOOK_SECRET=
+         
+         POSTGRES_URL=
+         POSTGRES_PRISMA_URL=
+         POSTGRES_URL_NO_SSL=
+         POSTGRES_URL_NON_POOLING=
+         POSTGRES_USER=
+         POSTGRES_HOST=
+         POSTGRES_PASSWORD=
+         POSTGRES_DATABASE=
+         
+         STRIPE_SECRET_KEY=
+         NEXT_PUBLIC_CLERK_PUBLISHABLEKEY=
 
 
 6. Inicie o servidor de desenvolvimento:
