@@ -18,9 +18,9 @@ Bem-vindo ao repositório da **Elegance**! Este projeto é uma loja de roupas mo
 
 - **Catálogo de Produtos**: Navegue por uma variedade de roupas modernas.
 - **Carrinho de Compras**: Adicione produtos ao carrinho e gerencie suas compras.
-- **Processamento de Pagamentos**: Realize transações de forma segura através do Stripe.
 - **Autenticação**: Crie uma conta, faça login e gerencie seu perfil com Clerk.
-- **SEO**: Otimização para motores de busca ou otimização para motores de pesquisa.
+- **Performance**: Desempenho otimizado para garantir uma experiência de navegação rápida e eficiente.
+- 
 ## Instalação
 
 Para executar este projeto localmente, siga os passos abaixo:
