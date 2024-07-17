@@ -42,10 +42,10 @@ export default async function ClothesProduct({
   return (
     <>
       <div className="grid md:grid-cols-2 gap-6 lg:gap-12 items-start max-w-6xl px-4 mx-auto py-6">
-        <div className="grid gap-3 items-start">
+        <div className="grid gap-3 items-start rounded-xl ">
           <ProductImage product={product} />
         </div>
-        <div className="grid gap-4 sm:mt-48 md:gap-10 items-start">
+        <div className="grid gap-4 sm:mt-20 md:gap-10 items-start">
           <div className="grid gap-4">
             <h1 className="font-bold text-3xl lg:text-4xl">{product.name}</h1>
             <div>

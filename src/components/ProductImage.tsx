@@ -14,8 +14,8 @@ export default function ProductImage({ product, fill }: ProductImageProps) {
     <div className="relative mx-3 mt-3 flex justify-center h-auto w-auto  overflow-hidden rounded-xl">
       <Image
         src={product.image}
-        width={ 700}
-        height={ 700}
+        width={ 300}
+        height={ 300}
         alt={product.name}
       />
     </div>
