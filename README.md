@@ -1,6 +1,8 @@
 
 # Elegance(CONCLUÍDO)
 
+![image](https://github.com/user-attachments/assets/5d1ba594-6d3b-4c22-b4b1-3995f73ac3bc)
+
 Bem-vindo ao repositório da **Elegance**! Este projeto é uma loja de roupas modernas que está atualmente pronto. A Elegance visa oferecer uma experiência de compra elegante e eficiente, utilizando tecnologias de ponta para criar uma plataforma robusta e intuitiva.
 
 ## Tecnologias Utilizadas
