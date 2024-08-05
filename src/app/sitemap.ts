@@ -1,5 +1,6 @@
+// app/sitemap.ts
 import { Metadata, MetadataRoute } from "next"
-// ;("trocar as urls")
+// ;("trocar as urls quando hospedar")
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   return [
     {

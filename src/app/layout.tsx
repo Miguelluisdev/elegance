@@ -1,5 +1,4 @@
-// app/layout.tsx (ou outro arquivo de layout principal)
-
+// app/layout.tsx
 import { Footer } from "@/components/footer";
 import { ThemeProvider } from "@/components/theme-provider";
 import ScrollControl from "@/hooks/use-to-top";
@@ -12,7 +11,7 @@ import ProtectComponent from "@/hooks/use-protect";
 import "./globals.css";
 
 const basker = Baskervville({ weight: "400", subsets: ["latin"] });
-
+  // configure o metadata abaixo:
 export const metadata: Metadata = {
   title: {
     default: "Elegance",
